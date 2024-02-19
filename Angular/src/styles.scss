@@ -1,0 +1,86 @@
+
+
+@import "theme.scss";
+
+html {
+  height: 100%; 
+  margin: 0;
+}
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0;
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+p {
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+a {
+  color: $primary-color; 
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: lighten($primary-color, 10%); 
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+
+button {
+  background-color: #fff;
+  color: $text-color;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-gap {
+  gap: 1rem;
+}
+

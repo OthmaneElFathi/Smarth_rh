@@ -1,0 +1,88 @@
+@import "/src/theme.scss";
+
+.container {
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: $secondary-color;
+  border: 2px solid $primary-color;
+  border-radius: 0;
+}
+
+.edit-job-offer-form {
+  margin-top: 20px;
+}
+
+.edit-job-offer-form h2 {
+  margin-bottom: 20px;
+  color: $primary-color;
+}
+
+.edit-job-offer-form div {
+  margin-bottom: 15px;
+}
+
+.edit-job-offer-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: $primary-color;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 0;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.chip {
+  display: inline-block;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 3px 10px;
+  border: 2px solid $primary-color;
+  border-radius: 0px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.add-button {
+  width: 80px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: 2px solid $primary-color;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-job-offer-form .add-button:hover {
+  background-color: $primary-color;
+  -webkit-filter: invert(100%);
+  filter: invert(100%); 
+}
+
+.edit-job-offer-form button[type="submit"] {
+  width: 100%;
+  padding: 10px 0;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: 2px solid $primary-color;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-job-offer-form button[type="submit"]:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+.edit-job-offer-form .creating {
+  color: $primary-color;
+}

@@ -1,0 +1,37 @@
+<div class="job-offer-container">
+  <div class="job-offer-detail" *ngIf="jobOffer">
+    <!-- Job Offer Details -->
+    <h2>{{ jobOffer.name }}</h2>
+    <p>{{ jobOffer.description }}</p>
+    <p>Date Added: {{ jobOffer.dateAdded | date: 'yyyy-MM-dd' }}</p>
+    <p>Date Expired: {{ jobOffer.dateExpired | date: 'yyyy-MM-dd' }}</p>
+    <h3>Required Skills:</h3>
+    <div class="chips-container">
+      <div *ngFor="let skill of jobOffer.requiredSkills" class="chip">{{ skill }}</div>
+  </div>
+    <button class="delete-button" (click)="deleteJobOffer()">Delete</button>
+<button class="edit-button" (click)="editJobOffer()">Edit</button>
+  </div>
+
+  <div class="candidates-container" *ngIf="candidates?.content">
+    <h2>Applicants</h2>
+    <div *ngFor="let candidate of candidates?.content" class="candidate-card">
+      <div class="profile-picture">
+        <img src="{{candidate.profilePictureUrl}}" alt="Profile Picture">
+      </div>
+      <h2>{{ candidate.firstName }} {{ candidate.lastName }}</h2>
+      <p>{{ candidate.description }}</p>
+      <p>Email: {{ candidate.email }}</p>
+      <p>Skills:</p>
+      <div class="chips-container">
+        <div *ngFor="let skill of candidate.skills" class="chip">{{ skill }}</div>
+    </div>
+      <button class="consult-resume-btn" (click)="loadResume(candidate.username)">Consult Resume</button>
+    </div>
+    <div class="pagination-container">
+      <a class="pagination-button" (click)="prevPage()"><</a>
+      <span>{{ currentPage + 1 }}</span>
+      <a class="pagination-button" (click)="nextPage()">></a>
+    </div>
+  </div>
+</div>

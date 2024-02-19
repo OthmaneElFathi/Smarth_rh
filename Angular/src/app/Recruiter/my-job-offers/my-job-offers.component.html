@@ -1,0 +1,38 @@
+<div class="header-container">
+    <h2>My Job Offers</h2>
+    <div class="create-job-offer-button">
+        <button (click)="navigateToCreateJobOffer()">Create Job Offer</button>
+    </div>
+    <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="onSearchChange()" placeholder="Search job offers..." class="search-input">
+</div>
+<div class="job-offers-container">
+    <div *ngIf="jobOffers && jobOffers.content.length === 0">No job offers available.</div>
+    <div *ngFor="let jobOffer of jobOffers?.content" (click)="navigateToJobOffer(jobOffer.id)">
+        <div class="card">
+            <div class="card-content">
+                <h3>{{ jobOffer.name }}</h3>
+                <p>{{ jobOffer.description }}</p>
+                <p>Date added: {{jobOffer.dateAdded | date: 'yyyy-MM-dd' }}</p>
+                <div class="chips-container">
+                    <div *ngFor="let skill of jobOffer.requiredSkills" class="chip">{{ skill }}</div>
+                </div>
+            </div>
+            <div class="menu-button-container">
+                <button mat-icon-button [matMenuTriggerFor]="actionsMenu" (click)="$event.stopPropagation()">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+            </div>
+            <!-- Dropdown menu for actions -->
+            <mat-menu #actionsMenu="matMenu" >
+                <button mat-menu-item (click)="editJobOffer(jobOffer.id)">Edit</button>
+                <button mat-menu-item (click)="deleteJobOffer(jobOffer.id)">Delete</button>
+            </mat-menu>
+        </div>
+    </div>
+    
+    <div class="pagination-container">
+        <button class="pagination-button" (click)="prevPage()"><</button>
+        <span>{{ currentPage + 1 }}</span>
+        <button class="pagination-button" (click)="nextPage()">></button>
+    </div>
+</div>

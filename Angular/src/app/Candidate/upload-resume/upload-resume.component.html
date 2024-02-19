@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="upload-resume-container">
+    <div class="upload-resume-form">
+      <h2>Upload Resume</h2>
+      <form (ngSubmit)="onSubmit()" #resumeForm="ngForm">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" [(ngModel)]="resumeData.title" required>
+        </div>
+        <div>
+          <label for="resume">Upload Resume (PDF):</label>
+          <div class="file-upload">
+             <input type="file" id="resume" name="resume" (change)="onFileSelected($event)" accept=".pdf" required>
+            <span id="fileName" class="file-name"></span>
+          </div>
+          </div>
+        <button type="submit" [disabled]="!resumeForm.valid || uploading">Upload</button>
+        <div *ngIf="uploading">Uploading...</div>
+      </form>
+    </div>
+  </div>
+</div>

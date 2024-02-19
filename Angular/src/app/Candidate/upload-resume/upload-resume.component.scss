@@ -1,0 +1,79 @@
+@import "/src/theme.scss";
+
+
+.container {
+  max-width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  padding: 20px;
+  background-color: $secondary-color;
+  border: 2px solid $primary-color; 
+  border-radius: 0; 
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: $primary-color;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid #ccc; 
+  border-radius: 0; 
+  margin: 0 auto; 
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden; 
+  width: 100%;
+  border: 2px solid $primary-color; 
+  border-radius: 0; 
+  margin-bottom: 20px;
+}
+
+
+input[type="file"]::before {
+  content: 'Upload Profile Picture'; 
+  display: inline-block;
+  background-color: $primary-color; 
+  color: $secondary-color; 
+  padding: 0.5rem 1rem; 
+  border-radius: 0px;
+  cursor: pointer; 
+
+}
+
+input[type="file"]:hover::before {
+  background-color: $primary-color;
+  -webkit-filter: invert(100%);
+  filter: invert(100%); 
+}
+.file-name {
+  display: inline-block;
+  margin-left: 10px;
+  color: $primary-color; 
+}
+button {
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: 2px solid $primary-color; 
+  border-radius: 0; 
+  padding: 10px 0; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; 
+}
+
+button:hover {
+  background-color: darken($primary-color, 10%); 
+}
+h2 {
+  margin-bottom: 20px;
+  color: $primary-color;
+}
+
+

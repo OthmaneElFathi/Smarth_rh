@@ -1,0 +1,9 @@
+@import "/src/theme.scss";
+
+footer {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; 
+}

@@ -1,0 +1,18 @@
+<nav>
+  <div class="logo">
+    <img src="assets/logo.png" alt="Logo">
+  </div>
+  <ul>
+    <li *ngIf="!isLoggedIn()"><a routerLink="/login">Login</a></li>
+    <li *ngIf="!isLoggedIn()"><a routerLink="/register">Register</a></li>
+    <li *ngIf="isLoggedIn()"><a (click)="logout()">Logout</a></li>
+    
+    <li *ngIf="isLoggedIn() && isCandidate()"><a routerLink="/job-offers">Job Offers</a></li>
+    <li *ngIf="isLoggedIn() && isCandidate()"><a routerLink="/my-applications">My Applications</a></li>
+    <li *ngIf="isLoggedIn() && isCandidate()"><a routerLink="/my-resume">My Resume</a></li>
+    <li *ngIf="isLoggedIn() && isCandidate() && !hasResume()"><a routerLink="/upload-resume">Upload Resume</a></li>
+    
+    <li *ngIf="isLoggedIn() && isRecruiter()"><a routerLink="/my-job-offers">My Job Offers</a></li>
+    <li *ngIf="isLoggedIn() && isRecruiter()"><a routerLink="/create-job-offer">Create Job Offer</a></li>
+  </ul>
+</nav>

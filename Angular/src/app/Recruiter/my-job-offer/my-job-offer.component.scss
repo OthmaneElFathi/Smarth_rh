@@ -1,0 +1,159 @@
+@import "/src/theme.scss";
+
+.job-offer-container {
+  max-width: 800px; 
+  margin: 20px auto; 
+}
+
+.job-offer-detail {
+  padding: 20px;
+  background-color: $secondary-color;
+  border-radius: 0px;
+  box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid $primary-color;
+  max-width: 800px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.job-offer-detail h2 {
+  margin-top: 0; 
+}
+
+.job-offer-detail p {
+  margin-bottom: 10px; 
+}
+
+.job-offer-detail ul {
+  list-style-type: circle; 
+  padding-left: 10px; 
+}
+
+.job-offer-detail ul li {
+  margin-bottom: 5px;
+  margin-left: 20px; 
+}
+
+.candidates-container {
+  width: 100%; 
+}
+
+
+.candidate-card {
+  border: 2px solid $primary-color;
+  border-radius: 0px;
+  padding: 20px;
+  margin-top: 20px;
+  box-sizing: border-box; 
+  position: relative; 
+}
+
+.profile-picture {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px; 
+}
+
+.candidate-card p {
+  margin-bottom: 10px;
+}
+
+.candidate-card ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.candidate-card ul li {
+  display: inline-block; 
+  margin-right: 5px; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+}
+.pagination-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .pagination-button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+  span {
+    margin: 0 10px;
+  }
+}
+
+button:hover::before {
+  
+}
+button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $primary-color;
+  -webkit-filter: invert(100%);
+  filter: invert(100%); 
+  }
+}
+.delete-button {
+  bottom: 10px; 
+  right: 80px;  
+}
+.update-button {
+  bottom: 10px; 
+  right: 10px; 
+}
+.chip {
+  display: inline-block;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 3px 10px;
+  border: 2px solid $primary-color;
+  border-radius: 0px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+  &:hover {
+    background-color: $secondary-color;
+  -webkit-filter: invert(100%);
+  filter: invert(100%); 
+  }
+}
+

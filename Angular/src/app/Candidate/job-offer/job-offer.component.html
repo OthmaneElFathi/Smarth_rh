@@ -1,0 +1,26 @@
+<div class="job-offer-detail" *ngIf="jobOffer">
+  <div class="header">
+    <h2>{{ jobOffer.name }}</h2>
+    <p>Date Added: {{ jobOffer.dateAdded  | date: 'yyyy-MM-dd' }}</p>
+    <p>Date Expired: {{ jobOffer.dateExpired  | date: 'yyyy-MM-dd' }}</p>
+  </div>
+  <div class="content">
+    <p>{{ jobOffer.description }}</p>
+    <h3>Required Skills:</h3>
+    <div class="chips-container">
+      <div *ngFor="let skill of jobOffer.requiredSkills" class="chip">{{ skill }}</div>
+    </div>
+    <div *ngIf="jobOffer.recruiter">
+      <h3>Recruiter:</h3>
+      <ul>
+        <li>First Name: {{ jobOffer.recruiter.firstName }}</li>
+        <li>Last Name: {{ jobOffer.recruiter.lastName }}</li>
+        <li>Email: {{ jobOffer.recruiter.email }}</li>
+        <li>Company Name: {{ jobOffer.recruiter.companyName }}</li>
+        <li>Contact Number: {{ jobOffer.recruiter.contactNumber }}</li>
+        <li>Company Address: {{ jobOffer.recruiter.companyAddress }}</li>
+      </ul>
+    </div>
+  </div>
+  <button class="apply-button" (click)="applyToJobOffer()">Apply to Job Offer</button>
+</div>

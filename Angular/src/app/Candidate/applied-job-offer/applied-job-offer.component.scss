@@ -1,0 +1,56 @@
+
+@import "/src/theme.scss";
+
+
+.job-offer-detail {
+  padding: 20px;
+  background-color: $secondary-color;
+  border-radius: 0px;
+  box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid $primary-color;
+  max-width: 600px;
+  margin: 20px auto;
+}
+.chip {
+  display: inline-block;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 3px 10px;
+  border: 2px solid $primary-color;
+  border-radius: 0px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin: 0;
+  color: $primary-color;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.content p {
+  margin-bottom: 10px;
+}
+
+.apply-button {
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: $primary-color;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}

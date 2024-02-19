@@ -1,0 +1,4 @@
+.git
+.gitignore
+/Angular/node_modules
+/Spring/target

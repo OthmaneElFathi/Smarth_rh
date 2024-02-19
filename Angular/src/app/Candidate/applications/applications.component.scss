@@ -1,0 +1,103 @@
+@import "/src/theme.scss";
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 20px 20px 20px; 
+
+  h1 {
+    margin: 0;
+    color: $primary-color; 
+  }
+
+  .search-input {
+    width: 300px; 
+    padding: 8px;
+    border: 2px solid $primary-color; 
+    border-radius: 0; 
+    outline: none;
+
+    &::placeholder {
+      color: $primary-color; 
+    }
+  }
+}
+.chip {
+  display: inline-block;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 3px 10px;
+  border: 2px solid $primary-color;
+  border-radius: 0px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.job-offers-container {
+  margin-right: 20px;
+  margin-left: 20px;
+  .card {
+    border: 2px solid $primary-color; 
+    border-radius: 0; 
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative; 
+  
+    h2 {
+      margin: 0;
+      font-weight: bold;
+      color: $primary-color; 
+    }
+  
+    p {
+      margin: 5px 0;
+      color: $primary-color; 
+    }
+  
+    .menu-button-container {
+      position: absolute; 
+      top: -10px; 
+      right: -10px;
+      z-index: 1; 
+  
+      button {
+        padding: 5px 10px;
+        background-color: $secondary-color; 
+        border: 2px solid $primary-color; 
+        border-radius: 0px; 
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          background-color: $primary-color;
+          color: $secondary-color; 
+        }
+      }
+    }
+  }
+
+  .pagination-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    .pagination-button {
+      padding: 5px 10px;
+      margin-right: 5px;
+      background-color: $secondary-color;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+
+    span {
+      margin: 0 10px;
+    }
+  }
+}
